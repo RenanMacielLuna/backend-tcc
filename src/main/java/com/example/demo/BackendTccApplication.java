@@ -1,24 +1,25 @@
 package com.example.demo;
 
 import java.io.FileNotFoundException;
-import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import com.example.demo.controller.CrimeController;
-import com.example.demo.entity.Crime;
+import com.example.demo.utils.CrimeUtils;
 
 @SpringBootApplication
 public class BackendTccApplication implements CommandLineRunner {
 
+  @Autowired
+  private CrimeUtils crimeUtils;
+  
 	public static void main(String[] args) throws FileNotFoundException {
 		SpringApplication.run(BackendTccApplication.class, args);	
 	}
 
   @Override
   public void run(String... args) throws Exception {
-    CrimeController controller = new CrimeController();
-    controller.salvarCrimes(); 
+//    crimeUtils.salvarCrimes();
   }
 
 }

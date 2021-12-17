@@ -1,7 +1,7 @@
 package com.example.demo.entity;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,14 +21,14 @@ public class Crime implements Serializable{
   private String municipioDoFato;
   private String regiaoGeografica;
   private String natureza;
-  private Date dataDoFato;
+  private LocalDate dataDoFato;
   private int ano;
   private String sexo;
   private String faixaEtaria;
   private int totalDeEnvolvidos;
   
   public Crime(String municipioDoFato, String regiaoGeografica, String natureza,
-      Date dataDoFato, int ano, String sexo, String faixaEtaria, int totalDeEnvolvidos) {
+      LocalDate dataDoFato, int ano, String sexo, String faixaEtaria, int totalDeEnvolvidos) {
     this.municipioDoFato = municipioDoFato;
     this.regiaoGeografica = regiaoGeografica;
     this.natureza = natureza;
@@ -74,11 +74,11 @@ public class Crime implements Serializable{
     this.natureza = natureza;
   }
   
-  public Date getDataDoFato() {
+  public LocalDate getDataDoFato() {
     return dataDoFato;
   }
   
-  public void setDataDoFato(Date dataDoFato) {
+  public void setDataDoFato(LocalDate dataDoFato) {
     this.dataDoFato = dataDoFato;
   }
   
